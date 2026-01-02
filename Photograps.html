@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+    <nav class="bg-green-700  w-full z-20 top-0 start-0 border-b border-default w-full h-25">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <div>
+                <p class="h-18 w-18 rounded-full bg-red-600 text-white font-bold text-4xl py-4 pr-3">1971</p>
+            </div>
+
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M5 7h14M5 12h14M5 17h14" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+                    <li>
+                        <a href="./index.html"
+                            class="block py-2 px-3 text-white bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="./Document.html"
+                            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Document
+                            section</a>
+                    </li>
+                    <li>
+                        <a href="./Interviews.html"
+                            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Interviews
+                            section</a>
+                    </li>
+                    <li>
+                        <a href="./Photograps.html"
+                            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Photograps
+                            Galary</a>
+                    </li>
+                    <li>
+                        <a href="./Contact.html"
+                            class="block py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="relative w-full ">
+        <img class=" object-cover w-full h-100" src="1.png" alt="">
+        <div class="">
+            <p class="absolute inset-0 flex items-center justify-center text-gray-800 text-7xl font-bold pb-30 ">
+                Libaration
+                War
+            </p>
+            <p class="absolute inset-0 flex items-center justify-center text-green-800 text-4xl font-bold pb-3 ">
+                Photograps Section
+            </p>
+            <p class="absolute inset-0 mx-auto pt-55 text-gray-800 w-300 text-center text-white font-bold text-xl">Lorem
+                ipsum
+                dolor sit
+                amet,
+                consectetur adipisicing elit. Culpa eveniet aliquid enim perferendis ea eos
+                laboriosam nihil ullam esse, rerum soluta, animi voluptates natus dolorum explicabo iure. Repellendus,
+                unde ratione? Lorem ipsum dolor sit amet consectetur.</p>
+
+
+        </div>
+
+    </div>
+
+
+
+    <section class="py-16 px-4 max-w-screen-xl mx-auto bg-white shadow-2xl rounded-3xl my-10 border border-gray-100">
+
+        <div class="text-center mb-12">
+            <h2 class="text-5xl font-black text-gray-900 mb-4 tracking-tighter uppercase">
+                Captured <span class="text-red-600">History</span>
+            </h2>
+            <div class="h-1.5 w-32 bg-green-700 mx-auto rounded-full"></div>
+            <p class="mt-4 text-gray-500 font-medium">Explore the moments that defined our independence through
+                categories</p>
+        </div>
+
+        <div class="mb-10">
+            <div class="border-b border-gray-200">
+                <ul class="flex flex-wrap -mb-px text-sm font-bold text-center justify-center" id="gallery-tabs"
+                    data-tabs-toggle="#gallery-tab-content" role="tablist">
+                    <li class="mr-2" role="presentation">
+                        <button
+                            class="inline-block p-4 border-b-2 rounded-t-lg uppercase tracking-widest transition-all"
+                            id="events-tab" data-tabs-target="#events" type="button" role="tab" aria-controls="events"
+                            aria-selected="true">
+                            <i class="fa-solid fa-calendar-check mr-2"></i>Events
+                        </button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button
+                            class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 uppercase tracking-widest transition-all"
+                            id="locations-tab" data-tabs-target="#locations" type="button" role="tab"
+                            aria-controls="locations" aria-selected="false">
+                            <i class="fa-solid fa-map-location-dot mr-2"></i>Locations
+                        </button>
+                    </li>
+                    <li class="mr-2" role="presentation">
+                        <button
+                            class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 uppercase tracking-widest transition-all"
+                            id="themes-tab" data-tabs-target="#themes" type="button" role="tab" aria-controls="themes"
+                            aria-selected="false">
+                            <i class="fa-solid fa-person-military-pointing mr-2"></i>Freedom Fighters
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="gallery-tab-content">
+
+            <div class="hidden p-4" id="events" role="tabpanel" aria-labelledby="events-tab">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="relative group overflow-hidden rounded-2xl shadow-lg border-4 border-white aspect-square">
+                        <img src="https://images.unsplash.com/photo-1590073844006-33379778ae09?auto=format&fit=crop&q=80&w=800"
+                            class="object-cover w-full h-full transition duration-500 group-hover:scale-110"
+                            alt="7th March">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                            <h4 class="text-white font-bold text-xl uppercase">7th March Speech</h4>
+                            <p class="text-gray-300 text-xs mb-4 leading-relaxed">The declaration of a nation's soul at
+                                Ramna Race Course.</p>
+                            <div class="flex gap-2">
+                                <a href="#" class="bg-red-600 text-white p-2 rounded-md hover:bg-red-700 transition"><i
+                                        class="fa-solid fa-expand"></i> View</a>
+                                <a href="#" class="bg-white text-black p-2 rounded-md hover:bg-gray-200 transition"><i
+                                        class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative group overflow-hidden rounded-2xl shadow-lg border-4 border-white aspect-square">
+                        <img src="./outdoor-orienteering-check-point-activity.jpg"
+                            class="object-cover w-full h-full transition duration-500 group-hover:scale-110"
+                            alt="7th March">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex flex-col justify-end p-6">
+                            <h4 class="text-white font-bold text-xl uppercase">7th March Speech</h4>
+                            <p class="text-gray-300 text-xs mb-4 leading-relaxed">The declaration of a nation's soul at
+                                Ramna Race Course.</p>
+                            <div class="flex gap-2">
+                                <a href="#" class="bg-red-600 text-white p-2 rounded-md hover:bg-red-700 transition"><i
+                                        class="fa-solid fa-expand"></i> View</a>
+                                <a href="#" class="bg-white text-black p-2 rounded-md hover:bg-gray-200 transition"><i
+                                        class="fa-solid fa-download"></i> Download</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden p-4" id="locations" role="tabpanel" aria-labelledby="locations-tab">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="relative group overflow-hidden rounded-2xl shadow-lg border-4 border-white aspect-square">
+                        <img src="https://images.unsplash.com/photo-1623057000739-3867bb28166d?auto=format&fit=crop&q=80&w=800"
+                            class="object-cover w-full h-full transition duration-500 group-hover:scale-110"
+                            alt="Suhrawardy Udyan">
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-green-900/80 via-transparent flex flex-col justify-end p-6">
+                            <h4 class="text-white font-bold text-xl uppercase">Suhrawardy Udyan</h4>
+                            <p class="text-gray-200 text-sm">Key strategic ground during the 1971 war.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden p-4" id="themes" role="tabpanel" aria-labelledby="themes-tab">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-dashed border-gray-300">
+                        <div class="w-full h-64 bg-gray-200 rounded-xl mb-4 overflow-hidden shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?auto=format&fit=crop&q=80&w=800"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="font-bold text-gray-800">The Brave Warriors</h4>
+                        <p class="text-sm text-gray-500 mt-2">A tribute to the freedom fighters (Mukti Bahini).</p>
+                        <button
+                            class="mt-4 bg-green-700 text-white px-6 py-2 rounded-full text-xs font-bold hover:bg-green-800 uppercase">View
+                            Gallery</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- footer -->
+
+
+    <footer class="bg-green-700 rounded-base shadow-xs border border-default ">
+        <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            <p id="clock"></p>
+
+
+            <span class="block text-sm text-body sm:text-center">© 2023 <a href="https://flowbite.com/"
+                    class="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
+</body>
+
+</html>

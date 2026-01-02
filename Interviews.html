@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interviews - 1971 Liberation War Archive</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-green-800 border-b border-green-900 sticky top-0 z-50">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="./index.html" class="flex items-center space-x-3">
+                <div
+                    class="bg-red-600 text-white font-bold text-2xl h-12 w-12 flex items-center justify-center rounded-full border-2 border-white">
+                    1971
+                </div>
+                <span class="self-center text-xl font-semibold whitespace-nowrap text-white">War Archive</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-green-700 focus:outline-none ring-2 ring-white">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0 text-white">
+                    <li><a href="./index.html" class="block py-2 px-3 hover:text-yellow-400 transition">Home</a></li>
+                    <li><a href="./Document.html" class="block py-2 px-3 hover:text-yellow-400 transition">Documents</a>
+                    </li>
+                    <li><a href="#" class="block py-2 px-3 text-yellow-400 font-bold">Interviews</a></li>
+                    <li><a href="./Photograps.html" class="block py-2 px-3 hover:text-yellow-400 transition">Gallery</a>
+                    </li>
+                    <li><a href="./Contact.html" class="block py-2 px-3 hover:text-yellow-400 transition">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-96 flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-green-900 via-blue-800 to-red-900"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 px-4 max-w-4xl">
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Oral Histories & Interviews</h1>
+            <div class="w-32 h-1 bg-red-500 mx-auto mb-6"></div>
+            <p class="text-lg md:text-xl font-light leading-relaxed">
+                Listen to the voices of history. First-hand accounts from freedom fighters, survivors, and witnesses who
+                lived through the 1971 Liberation War. Their stories preserve the truth for future generations.
+            </p>
+        </div>
+    </section>
+
+
+
+    <!-- Tabs Navigation using Flowbite -->
+    <section class="py-8 bg-white">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <div class="mb-8">
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="interviewTabs"
+                    data-tabs-toggle="#interviewTabsContent" role="tablist">
+                    <li class="me-2" role="presentation">
+                        <button class="inline-block p-4 border-b-2 rounded-t-lg" id="all-tab" data-tabs-target="#all"
+                            type="button" role="tab" aria-controls="all" aria-selected="true">All Interviews</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button
+                            class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                            id="fighters-tab" data-tabs-target="#fighters" type="button" role="tab"
+                            aria-controls="fighters" aria-selected="false">Freedom Fighters</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button
+                            class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                            id="civilians-tab" data-tabs-target="#civilians" type="button" role="tab"
+                            aria-controls="civilians" aria-selected="false">Civilians</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button
+                            class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                            id="witnesses-tab" data-tabs-target="#witnesses" type="button" role="tab"
+                            aria-controls="witnesses" aria-selected="false">Eyewitnesses</button>
+                    </li>
+                    <li class="me-2" role="presentation">
+                        <button
+                            class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                            id="audio-tab" data-tabs-target="#audio" type="button" role="tab" aria-controls="audio"
+                            aria-selected="false">Audio Only</button>
+                    </li>
+                    <li role="presentation">
+                        <button
+                            class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+                            id="video-tab" data-tabs-target="#video" type="button" role="tab" aria-controls="video"
+                            aria-selected="false">Video Interviews</button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab Content -->
+            <div id="interviewTabsContent">
+                <!-- Tab 1: All Interviews -->
+                <div class="p-4 rounded-lg bg-gray-50" id="all" role="tabpanel" aria-labelledby="all-tab">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">All Interviews Collection</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Interview Card 1 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-user text-blue-600 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Captain (Retd.) Abdul Malek</h3>
+                                        <p class="text-green-700 font-medium">Sector Commander, Sector 8</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    A veteran freedom fighter who commanded operations in the Khulna region. He
+                                    shares detailed accounts of guerrilla tactics, key battles, and the challenges
+                                    of organizing resistance.
+                                </p>
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full mr-2">
+                                        <i class="fas fa-microphone mr-1"></i> Audio
+                                    </div>
+                                    <div class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                                        <i class="fas fa-clock mr-1"></i> 45 min
+                                    </div>
+                                </div>
+                                <button type="button" data-modal-target="audioModal" data-modal-toggle="audioModal"
+                                    class="w-full bg-green-700 hover:bg-green-800 text-white font-medium py-3 rounded-lg transition flex items-center justify-center">
+                                    <i class="fas fa-play-circle mr-2"></i> Listen to Interview
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Interview Card 2 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="h-16 w-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-female text-purple-600 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Dr. Selina Parvin</h3>
+                                        <p class="text-green-700 font-medium">Medical Volunteer, Dhaka</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Provided medical assistance to wounded freedom fighters and civilians. Recounts
+                                    the makeshift hospitals, shortage of supplies, and resilience of medical
+                                    volunteers during the war.
+                                </p>
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full mr-2">
+                                        <i class="fas fa-video mr-1"></i> Video
+                                    </div>
+                                    <div class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                                        <i class="fas fa-clock mr-1"></i> 32 min
+                                    </div>
+                                </div>
+                                <button type="button" data-modal-target="videoModal" data-modal-toggle="videoModal"
+                                    class="w-full bg-green-700 hover:bg-green-800 text-white font-medium py-3 rounded-lg transition flex items-center justify-center">
+                                    <i class="fas fa-play-circle mr-2"></i> Watch Interview
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Interview Card 3 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="h-16 w-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-user-tie text-yellow-600 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Professor Ahmed Hossain</h3>
+                                        <p class="text-green-700 font-medium">Eyewitness, University of Dhaka</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Witnessed the crackdown on March 25, 1971. Describes the atmosphere at Dhaka
+                                    University, the targeting of intellectuals, and the early days of resistance.
+                                </p>
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full mr-2">
+                                        <i class="fas fa-microphone mr-1"></i> Audio
+                                    </div>
+                                    <div class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                                        <i class="fas fa-clock mr-1"></i> 28 min
+                                    </div>
+                                </div>
+                                <button type="button" data-modal-target="audioModal2" data-modal-toggle="audioModal2"
+                                    class="w-full bg-green-700 hover:bg-green-800 text-white font-medium py-3 rounded-lg transition flex items-center justify-center">
+                                    <i class="fas fa-play-circle mr-2"></i> Listen to Interview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Freedom Fighters -->
+                <div class="hidden p-4 rounded-lg bg-gray-50" id="fighters" role="tabpanel"
+                    aria-labelledby="fighters-tab">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Freedom Fighters Interviews</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Freedom Fighter Interview 1 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="h-16 w-16 bg-red-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-medal text-red-600 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Bir Protik Karimullah</h3>
+                                        <p class="text-green-700 font-medium">Mukti Bahini, Chittagong Hill Tracts
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Awarded for bravery in the Hill Tracts region. Describes ambush tactics,
+                                    coordination with local tribes, and liberation of key areas in the southeast.
+                                </p>
+                                <div class="mb-4">
+                                    <h4 class="font-bold text-gray-700 mb-2">Key Testimonies:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                        <li>Guerrilla warfare tactics in difficult terrain</li>
+                                        <li>Relations with local indigenous communities</li>
+                                        <li>Capture of enemy outposts</li>
+                                    </ul>
+                                </div>
+                                <button type="button" data-modal-target="audioModal" data-modal-toggle="audioModal"
+                                    class="w-full bg-red-700 hover:bg-red-800 text-white font-medium py-3 rounded-lg transition flex items-center justify-center">
+                                    <i class="fas fa-play-circle mr-2"></i> Listen to Full Interview
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Freedom Fighter Interview 2 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="h-16 w-16 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-ship text-blue-600 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Commander (Navy) Rezaul Karim
+                                        </h3>
+                                        <p class="text-green-700 font-medium">Naval Commando, Operation Jackpot</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Participated in Operation Jackpot, the naval guerrilla campaign. Recounts mining
+                                    enemy ships, daring raids on ports, and disrupting enemy supply lines.
+                                </p>
+                                <div class="mb-4">
+                                    <h4 class="font-bold text-gray-700 mb-2">Key Testimonies:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                        <li>Naval commando training in India</li>
+                                        <li>Operation Jackpot details</li>
+                                        <li>Sabotage of enemy vessels</li>
+                                    </ul>
+                                </div>
+                                <button type="button" data-modal-target="videoModal" data-modal-toggle="videoModal"
+                                    class="w-full bg-red-700 hover:bg-red-800 text-white font-medium py-3 rounded-lg transition flex items-center justify-center">
+                                    <i class="fas fa-play-circle mr-2"></i> Watch Full Interview
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Civilians -->
+                <div class="hidden p-4 rounded-lg bg-gray-50" id="civilians" role="tabpanel"
+                    aria-labelledby="civilians-tab">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Civilian Experiences</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Civilian Interview 1 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="h-16 w-16 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-home text-green-600 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Mrs. Rahima Begum</h3>
+                                        <p class="text-green-700 font-medium">Refugee, Jessore</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Fled her village with seven children, crossed the border to India. Describes the
+                                    refugee camp conditions, loss of home, and eventual return after liberation.
+                                </p>
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
+                                        <i class="fas fa-microphone mr-1"></i> Audio - 22 min
+                                    </div>
+                                </div>
+                                <button type="button" data-modal-target="audioModal" data-modal-toggle="audioModal"
+                                    class="w-full bg-green-700 hover:bg-green-800 text-white font-medium py-3 rounded-lg transition flex items-center justify-center">
+                                    <i class="fas fa-play-circle mr-2"></i> Listen to Experience
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Civilian Interview 2 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="h-16 w-16 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-book text-yellow-600 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Mr. Shafiqul Islam</h3>
+                                        <p class="text-green-700 font-medium">Student, Rajshahi</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Participated in the student movement and later helped freedom fighters with
+                                    intelligence gathering. Shares experiences of secret meetings and underground
+                                    networks.
+                                </p>
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
+                                        <i class="fas fa-video mr-1"></i> Video - 18 min
+                                    </div>
+                                </div>
+                                <button type="button" data-modal-target="videoModal" data-modal-toggle="videoModal"
+                                    class="w-full bg-green-700 hover:bg-green-800 text-white font-medium py-3 rounded-lg transition flex items-center justify-center">
+                                    <i class="fas fa-play-circle mr-2"></i> Watch Interview
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Civilian Interview 3 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="h-16 w-16 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-hands-helping text-purple-600 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Mr. Nitai Chandra Das</h3>
+                                        <p class="text-green-700 font-medium">Village Leader, Comilla</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Organized shelter and food for displaced families. Coordinated with freedom
+                                    fighters for village defense and helped hide civilians during military
+                                    operations.
+                                </p>
+                                <div class="flex items-center mb-4">
+                                    <div class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
+                                        <i class="fas fa-microphone mr-1"></i> Audio - 35 min
+                                    </div>
+                                </div>
+                                <button type="button" data-modal-target="audioModal2" data-modal-toggle="audioModal2"
+                                    class="w-full bg-green-700 hover:bg-green-800 text-white font-medium py-3 rounded-lg transition flex items-center justify-center">
+                                    <i class="fas fa-play-circle mr-2"></i> Listen to Account
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Eyewitnesses -->
+                <div class="hidden p-4 rounded-lg bg-gray-50" id="witnesses" role="tabpanel"
+                    aria-labelledby="witnesses-tab">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Eyewitness Accounts</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Eyewitness Interview 1 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="h-16 w-16 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-eye text-indigo-600 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Journalist Kamal Lohani</h3>
+                                        <p class="text-green-700 font-medium">Swadhin Bangla Betar Kendra</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Worked at the clandestine radio station that broadcasted news and patriotic
+                                    songs. Witnessed the cultural resistance movement and propaganda efforts against
+                                    Pakistani forces.
+                                </p>
+                                <div class="mb-4">
+                                    <h4 class="font-bold text-gray-700 mb-2">Key Observations:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                        <li>Operation of clandestine radio station</li>
+                                        <li>Impact of patriotic broadcasts on morale</li>
+                                        <li>Cultural resistance efforts</li>
+                                    </ul>
+                                </div>
+                                <button type="button" data-modal-target="videoModal" data-modal-toggle="videoModal"
+                                    class="w-full bg-indigo-700 hover:bg-indigo-800 text-white font-medium py-3 rounded-lg transition flex items-center justify-center">
+                                    <i class="fas fa-play-circle mr-2"></i> Watch Eyewitness Account
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Eyewitness Interview 2 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <div class="flex items-center mb-4">
+                                    <div
+                                        class="h-16 w-16 bg-teal-100 rounded-full flex items-center justify-center mr-4">
+                                        <i class="fas fa-church text-teal-600 text-2xl"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-bold text-gray-800">Father Joseph Gomes</h3>
+                                        <p class="text-green-700 font-medium">Missionary, Dinajpur</p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    Provided sanctuary to people of all faiths during military operations. Witnessed
+                                    interfaith solidarity and describes how religious institutions became safe
+                                    havens.
+                                </p>
+                                <div class="mb-4">
+                                    <h4 class="font-bold text-gray-700 mb-2">Key Observations:</h4>
+                                    <ul class="list-disc pl-5 text-gray-600 space-y-1">
+                                        <li>Interfaith solidarity during crisis</li>
+                                        <li>Use of religious institutions as shelters</li>
+                                        <li>Humanitarian efforts across communities</li>
+                                    </ul>
+                                </div>
+                                <button type="button" data-modal-target="audioModal" data-modal-toggle="audioModal"
+                                    class="w-full bg-indigo-700 hover:bg-indigo-800 text-white font-medium py-3 rounded-lg transition flex items-center justify-center">
+                                    <i class="fas fa-play-circle mr-2"></i> Listen to Account
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 5: Audio Only -->
+                <div class="hidden p-4 rounded-lg bg-gray-50" id="audio" role="tabpanel" aria-labelledby="audio-tab">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Audio Interviews Collection</h2>
+                    <div class="space-y-6">
+                        <!-- Audio Player 1 -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                            <div class="flex flex-col md:flex-row items-center">
+                                <div class="md:w-1/3 mb-4 md:mb-0">
+                                    <h3 class="text-xl font-bold text-gray-800">Interview with Colonel (Retd.)
+                                        Shafaat Jamil</h3>
+                                    <p class="text-green-700 font-medium mt-1">Sector Commander, Sector 3</p>
+                                    <div class="flex items-center mt-3">
+                                        <div
+                                            class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                                            <i class="fas fa-clock mr-1"></i> 52 min
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3 w-full">
+                                    <div class="bg-gray-100 p-4 rounded-lg">
+                                        <div class="flex items-center justify-between mb-3">
+                                            <div>
+                                                <span class="font-medium text-gray-700">Now Playing:</span>
+                                                <span class="text-gray-600 ml-2">Operation in Kushtia Region</span>
+                                            </div>
+                                            <div class="text-gray-500">00:00 / 52:14</div>
+                                        </div>
+                                        <div class="flex items-center space-x-4">
+                                            <button
+                                                class="w-10 h-10 rounded-full bg-green-700 text-white flex items-center justify-center hover:bg-green-800">
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                            <div class="flex-1 h-2 bg-gray-300 rounded-full overflow-hidden">
+                                                <div class="h-full bg-green-600 w-1/3"></div>
+                                            </div>
+                                            <div class="text-gray-500">
+                                                <i class="fas fa-volume-up"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Audio Player 2 -->
+                        <div class="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+                            <div class="flex flex-col md:flex-row items-center">
+                                <div class="md:w-1/3 mb-4 md:mb-0">
+                                    <h3 class="text-xl font-bold text-gray-800">Survivor Account: Ms. Hasina Ahmed
+                                    </h3>
+                                    <p class="text-green-700 font-medium mt-1">March 25, 1971 Survivor</p>
+                                    <div class="flex items-center mt-3">
+                                        <div
+                                            class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
+                                            <i class="fas fa-clock mr-1"></i> 41 min
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="md:w-2/3 w-full">
+                                    <div class="bg-gray-100 p-4 rounded-lg">
+                                        <div class="flex items-center justify-between mb-3">
+                                            <div>
+                                                <span class="font-medium text-gray-700">Now Playing:</span>
+                                                <span class="text-gray-600 ml-2">Escape from Dhaka University
+                                                    Area</span>
+                                            </div>
+                                            <div class="text-gray-500">00:00 / 41:22</div>
+                                        </div>
+                                        <div class="flex items-center space-x-4">
+                                            <button
+                                                class="w-10 h-10 rounded-full bg-green-700 text-white flex items-center justify-center hover:bg-green-800">
+                                                <i class="fas fa-play"></i>
+                                            </button>
+                                            <div class="flex-1 h-2 bg-gray-300 rounded-full overflow-hidden">
+                                                <div class="h-full bg-green-600 w-1/4"></div>
+                                            </div>
+                                            <div class="text-gray-500">
+                                                <i class="fas fa-volume-up"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 6: Video Interviews -->
+                <div class="hidden p-4 rounded-lg bg-gray-50" id="video" role="tabpanel" aria-labelledby="video-tab">
+                    <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Video Interviews Collection</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Video Interview 1 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Interview with Air Vice Marshal
+                                    (Retd.) A. K. Khandker</h3>
+                                <p class="text-green-700 font-medium mb-4">Deputy Chief of Staff, Mukti Bahini</p>
+                                <div class="video-container mb-4 rounded-lg overflow-hidden">
+                                    <iframe src="https://www.youtube.com/embed/zYRMzJ1mIqg" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    The Deputy Chief of Staff of Mukti Bahini discusses the overall strategy,
+                                    international diplomacy efforts, and coordination between different sectors of
+                                    the liberation forces.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Video Interview 2 -->
+                        <div
+                            class="interview-card bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-800 mb-2">Documentary: Women in the
+                                    Liberation War</h3>
+                                <p class="text-green-700 font-medium mb-4">Multiple Interviewees</p>
+                                <div class="video-container mb-4 rounded-lg overflow-hidden">
+                                    <iframe src="https://www.youtube.com/embed/5PSNL1qE6VY" title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                                <p class="text-gray-600 mb-4">
+                                    This documentary features interviews with women who served as combatants,
+                                    nurses, informants, and organizers during the war, highlighting their often
+                                    overlooked contributions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flowbite Modal for Audio Player -->
+    <div id="audioModal" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                    <h3 class="text-xl font-semibold text-gray-900">
+                        Interview Audio Player
+                    </h3>
+                    <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+                        data-modal-hide="audioModal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <div class="mb-4">
+                        <h4 id="audioTitle" class="text-lg font-medium text-gray-700 mb-2">Interview with Captain
+                            Abdul Malek</h4>
+                        <p id="audioDesc" class="text-gray-600">Sector Commander, Sector 8 - Recorded in 2018</p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-gray-700 font-medium">Now Playing</div>
+                            <div id="audioTime" class="text-gray-500">00:00 / 45:30</div>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <button id="playPauseBtn"
+                                class="w-12 h-12 rounded-full bg-green-700 text-white flex items-center justify-center hover:bg-green-800">
+                                <i class="fas fa-play text-lg"></i>
+                            </button>
+                            <div class="flex-1">
+                                <div class="h-2 bg-gray-300 rounded-full overflow-hidden">
+                                    <div id="progressBar" class="h-full bg-green-600 w-0"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-gray-500">
+                                <i class="fas fa-volume-up mr-2"></i>
+                                <input type="range" min="0" max="100" value="80" class="w-24">
+                            </div>
+                            <div class="text-gray-500">
+                                <button class="mx-2 hover:text-gray-700">
+                                    <i class="fas fa-step-backward"></i>
+                                </button>
+                                <button class="mx-2 hover:text-gray-700">
+                                    <i class="fas fa-step-forward"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        <p><i class="fas fa-info-circle mr-1"></i> This interview is part of the 1971 Oral History
+                            Project, recorded for historical preservation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second Audio Modal (for different interviews) -->
+    <div id="audioModal2" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-2xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                    <h3 class="text-xl font-semibold text-gray-900">
+                        Interview Audio Player
+                    </h3>
+                    <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+                        data-modal-hide="audioModal2">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <div class="mb-4">
+                        <h4 id="audioTitle2" class="text-lg font-medium text-gray-700 mb-2">Interview with Professor
+                            Ahmed Hossain</h4>
+                        <p id="audioDesc2" class="text-gray-600">Eyewitness, University of Dhaka - Recorded in 2019
+                        </p>
+                    </div>
+                    <div class="bg-gray-100 p-6 rounded-lg">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="text-gray-700 font-medium">Now Playing</div>
+                            <div id="audioTime2" class="text-gray-500">00:00 / 28:15</div>
+                        </div>
+                        <div class="flex items-center space-x-4 mb-6">
+                            <button id="playPauseBtn2"
+                                class="w-12 h-12 rounded-full bg-green-700 text-white flex items-center justify-center hover:bg-green-800">
+                                <i class="fas fa-play text-lg"></i>
+                            </button>
+                            <div class="flex-1">
+                                <div class="h-2 bg-gray-300 rounded-full overflow-hidden">
+                                    <div id="progressBar2" class="h-full bg-green-600 w-0"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-gray-500">
+                                <i class="fas fa-volume-up mr-2"></i>
+                                <input type="range" min="0" max="100" value="80" class="w-24">
+                            </div>
+                            <div class="text-gray-500">
+                                <button class="mx-2 hover:text-gray-700">
+                                    <i class="fas fa-step-backward"></i>
+                                </button>
+                                <button class="mx-2 hover:text-gray-700">
+                                    <i class="fas fa-step-forward"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-sm text-gray-500">
+                        <p><i class="fas fa-info-circle mr-1"></i> This interview is part of the 1971 Oral History
+                            Project, recorded for historical preservation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Flowbite Modal for Video Player -->
+    <div id="videoModal" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-4xl max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
+                    <h3 class="text-xl font-semibold text-gray-900">
+                        Interview Video Player
+                    </h3>
+                    <button type="button"
+                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center"
+                        data-modal-hide="videoModal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5 space-y-4">
+                    <div class="video-container mb-4 rounded-lg overflow-hidden">
+                        <iframe id="videoFrame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Interview Video"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <div>
+                        <h4 id="videoTitle" class="text-lg font-medium text-gray-700 mb-2">Interview with Dr. Selina
+                            Parvin</h4>
+                        <p id="videoDesc" class="text-gray-600">Medical Volunteer, Dhaka - This video interview was
+                            recorded in 2015 as part of the Liberation War Documentation Project.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white py-12">
+        <div class="max-w-screen-xl mx-auto px-4 text-center">
+            <div class="mb-6">
+                <h2 class="text-2xl font-bold">Liberation War Archive</h2>
+                <p class="text-green-300 mt-2">Born of Spirit, Bound by History.</p>
+            </div>
+            <hr class="border-green-800 mb-6">
+            <p class="text-sm text-green-400">© 2026 Liberation War Project. Built for History Preservation.</p>
+        </div>
+    </footer>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
+
+</body>
+
+</html>
+<!-- Footer -->
+<footer class="bg-green-900 text-white py-12">
+    <div class="max-w-screen-xl mx-auto px-4 text-center">
+        <div class="mb-6">
+            <h2 class="text-2xl font-bold">Liberation War Archive</h2>
+            <p class="text-green-300 mt-2">Born of Spirit, Bound by History.</p>
+        </div>
+        <hr class="border-green-800 mb-6">
+        <p class="text-sm text-green-400">© 2026 Liberation War Project. Built for History Preservation.</p>
+    </div>
+</footer>
+
+
+</body>
+
+</html>
